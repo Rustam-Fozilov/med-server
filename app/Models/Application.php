@@ -5,18 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Doctor extends Model
+class Application extends Model
 {
     use HasFactory;
 
-    protected $table = 'doctors';
+    protected $table = 'applications';
 
     protected $fillable = [
         'user_id',
-        'birth_year',
-        'experience',
+        'doctor_id',
+        'time',
+        'status',
     ];
 
     public function user(): BelongsTo
@@ -24,8 +24,8 @@ class Doctor extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function applications(): HasMany
+    public function doctor(): BelongsTo
     {
-        return $this->hasMany(Application::class);
+        return $this->belongsTo(Doctor::class);
     }
 }
