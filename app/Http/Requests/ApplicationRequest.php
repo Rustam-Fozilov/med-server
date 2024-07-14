@@ -26,6 +26,7 @@ class ApplicationRequest extends FormRequest
             'l_name' => ['required', 'string'],
             'phone' => ['required', 'string'],
             'doctor_id' => ['required', 'exists:doctors,id'],
+            'time' => ['required', 'date_format:H:i'],
         ];
     }
 }

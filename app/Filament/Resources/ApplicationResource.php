@@ -6,12 +6,10 @@ use App\Filament\Resources\ApplicationResource\Pages;
 use App\Filament\Resources\ApplicationResource\RelationManagers;
 use App\Http\Enums\StatusType;
 use App\Models\Application;
-use Filament\Forms;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -20,9 +18,9 @@ class ApplicationResource extends Resource
 {
     protected static ?string $model = Application::class;
 
-    protected static ?string $label = "Ariza";
+    protected static ?string $label = "Murojaat";
 
-    protected static ?string $pluralLabel = "Arizalar";
+    protected static ?string $pluralLabel = "Murojaatlar";
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
