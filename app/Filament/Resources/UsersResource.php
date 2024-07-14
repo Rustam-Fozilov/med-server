@@ -17,6 +17,10 @@ class UsersResource extends Resource
 {
     protected static ?string $model = User::class;
 
+    protected static ?string $label = "Foydalanuvchi";
+
+    protected static ?string $pluralLabel = "Foydalanuvchilar";
+
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
@@ -34,6 +38,7 @@ class UsersResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('id'),
                 Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('phone'),
                 Tables\Columns\TextColumn::make('email'),
                 Tables\Columns\TextColumn::make('created_at'),
             ])

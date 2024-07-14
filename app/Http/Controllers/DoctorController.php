@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\DoctorResource;
 use App\Models\Doctor;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class DoctorController extends Controller
@@ -10,9 +12,13 @@ class DoctorController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): JsonResponse
     {
-        //
+        $doctors = DoctorResource::collection(
+            Doctor::all()
+        );
+
+        return response()->json($doctors);
     }
 
     /**

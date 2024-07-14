@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Http\Request;
@@ -12,4 +13,5 @@ Route::get('/user', function (Request $request) {
 Route::resources([
     'doctors' => DoctorController::class,
     'services' => ServiceController::class,
+    'applications' => ApplicationController::class,
 ]);
