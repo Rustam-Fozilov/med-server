@@ -18,12 +18,16 @@ class StartHandler extends WebhookHandler
 
     protected function handleChatMessage(Stringable $text): void
     {
-        $phone = $this->message->contact()->phoneNumber();
-        $userId = $this->message->contact()->userId();
-        $verifyUserId = $this->message->from()->id();
+        $phone = $this->message->contact()?->phoneNumber();
+        $userId = $this->message->contact()?->userId();
+        $verifyUserId = $this->message->from()?->id();
 
         $isVerifyPhone = intval($userId == $verifyUserId);
 
-        $this->chat->html("Received: $phone, $userId, $verifyUserId, Total: $isVerifyPhone")->removeReplyKeyboard()->send();
+        if (!$phone) {
+            $this->chat->message('telefon raqamni tashla');
+        }
+
+        $this->chat->html("Received: $phone, $userId, $verifyUserId, Total: $isVerifyPhone")->send();
     }
 }
