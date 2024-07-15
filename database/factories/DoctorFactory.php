@@ -21,6 +21,8 @@ class DoctorFactory extends Factory
             'specialization' => fake()->jobTitle,
             'experience' => fake()->company,
             'birth_year' => fake()->year,
+            'work_start_time' => fake()->time,
+            'work_end_time' => fake()->time,
         ];
     }
 }

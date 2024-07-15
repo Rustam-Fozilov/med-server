@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('specialization')->nullable();
             $table->string('experience')->nullable();
             $table->unsignedInteger('birth_year')->nullable();
+            $table->time('work_start_time')->nullable();
+            $table->time('work_end_time')->nullable();
             $table->timestamps();
         });
     }

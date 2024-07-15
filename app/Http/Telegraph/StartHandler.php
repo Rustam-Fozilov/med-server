@@ -11,9 +11,11 @@ class StartHandler extends WebhookHandler
 {
     public function start(): void
     {
-        $this->chat->message('Salom, Telefon raqamingizni jo\'nating!')->replyKeyboard(ReplyKeyboard::make()->oneTime()->buttons([
-            ReplyButton::make("Telefon raqamni jo'natish")->requestContact(),
-        ]))->send();
+//        $this->chat->message('Salom, Telefon raqamingizni jo\'nating!')->replyKeyboard(ReplyKeyboard::make()->oneTime()->buttons([
+//            ReplyButton::make("Telefon raqamni jo'natish")->requestContact(),
+//        ]))->send();
+
+        $this->chat->message($this->chat->id)->send();
     }
 
     protected function handleChatMessage(Stringable $text): void

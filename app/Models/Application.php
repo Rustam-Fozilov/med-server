@@ -15,6 +15,7 @@ class Application extends Model
     protected $fillable = [
         'user_id',
         'doctor_id',
+        'date',
         'time',
         'status',
     ];

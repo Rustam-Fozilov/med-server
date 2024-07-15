@@ -22,7 +22,7 @@ class ApplicationResource extends Resource
 
     protected static ?string $pluralLabel = "Murojaatlar";
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
     public static function form(Form $form): Form
     {
@@ -46,9 +46,10 @@ class ApplicationResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id'),
-                Tables\Columns\TextColumn::make('user.name')->label('Name'),
-                Tables\Columns\TextColumn::make('user.phone')->label('Phone'),
-                Tables\Columns\TextColumn::make('time'),
+                Tables\Columns\TextColumn::make('user.name')->label('F.I.O'),
+                Tables\Columns\TextColumn::make('user.phone')->label('Telefon'),
+                Tables\Columns\TextColumn::make('date')->label('Sana'),
+                Tables\Columns\TextColumn::make('time')->label('Vaqt'),
                 Tables\Columns\BadgeColumn::make('status')
                     ->colors([
                         'warning' => StatusType::PENDING->value,
@@ -56,7 +57,7 @@ class ApplicationResource extends Resource
                         'danger' => StatusType::REJECTED->value,
                         'gray' => StatusType::COMPLETED->value,
                     ]),
-                Tables\Columns\TextColumn::make('created_at')->dateTime('d-m-Y | H:i:s'),
+                Tables\Columns\TextColumn::make('created_at')->dateTime('d-m-Y | H:i:s')->label('Yaratilgan sana'),
             ])
             ->filters([
                 //

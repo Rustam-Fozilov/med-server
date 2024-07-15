@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ApplicationRequest;
+use App\Http\Requests\StoreApplicationRequest;
 use App\Models\Application;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
@@ -15,7 +15,7 @@ class ApplicationController extends Controller
 
     }
 
-    public function store(ApplicationRequest $request): JsonResponse
+    public function store(StoreApplicationRequest $request): JsonResponse
     {
         $user = User::query()->where('phone', '=', $request['phone'])->first();
 
@@ -29,6 +29,7 @@ class ApplicationController extends Controller
         Application::query()->create([
             'user_id' => $user->id,
             'doctor_id' => $request['doctor_id'],
+            'date' => $request['date'],
             'time' => $request['time'],
         ]);
 

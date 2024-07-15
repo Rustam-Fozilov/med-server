@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ApplicationRequest extends FormRequest
+class StoreApplicationRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,6 +26,7 @@ class ApplicationRequest extends FormRequest
             'l_name' => ['required', 'string'],
             'phone' => ['required', 'string'],
             'doctor_id' => ['required', 'exists:doctors,id'],
+            'date' => ['required', 'date_format:Y-m-d'],
             'time' => ['required', 'date_format:H:i'],
         ];
     }

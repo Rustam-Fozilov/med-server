@@ -20,7 +20,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'phone',
-        'tg_id',
+        'telegraph_chat_id',
         'email',
         'password',
     ];
