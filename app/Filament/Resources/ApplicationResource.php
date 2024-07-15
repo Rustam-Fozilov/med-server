@@ -6,7 +6,9 @@ use App\Filament\Resources\ApplicationResource\Pages;
 use App\Filament\Resources\ApplicationResource\RelationManagers;
 use App\Http\Enums\StatusType;
 use App\Models\Application;
+use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -37,7 +39,8 @@ class ApplicationResource extends Resource
                         StatusType::COMPLETED->value => StatusType::COMPLETED->value,
                     ])
                     ->required()
-                ->native(false)
+                ->native(false),
+                Hidden::make('id'),
             ]);
     }
 
