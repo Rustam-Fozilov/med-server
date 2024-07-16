@@ -13,6 +13,7 @@ class UserPolicy
      */
     public function viewAny(User $user): bool
     {
+//        return false;
         return $user->hasRole([RoleType::SUPER_ADMIN, RoleType::MODERATOR]);
     }
 
@@ -21,6 +22,7 @@ class UserPolicy
      */
     public function view(User $user, User $model): bool
     {
+//        return false;
         return $user->hasRole([RoleType::SUPER_ADMIN, RoleType::MODERATOR]);
     }
 

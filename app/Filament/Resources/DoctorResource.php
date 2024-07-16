@@ -6,12 +6,12 @@ use App\Filament\Resources\DoctorResource\Pages;
 use App\Filament\Resources\DoctorResource\RelationManagers;
 use App\Models\Doctor;
 use Filament\Forms;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class DoctorResource extends Resource
 {
@@ -27,7 +27,32 @@ class DoctorResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\Group::make([
+                    Forms\Components\Section::make([
+//                        Forms\Components\TextInput::make('user.name')->label('Name')->required(),
+//                        Forms\Components\TextInput::make('user.phone')->label('Phone')->required(),
+                        Forms\Components\TextInput::make('user_id'),
+                        Forms\Components\TextInput::make('specialization')->label('Mutaxassisligi')->required(),
+                        Forms\Components\TextInput::make('experience')->label('experience'),
+                        Forms\Components\TextInput::make('birth_year')->numeric()->label("Tug'ilgan sana"),
+                    ])
+                ]),
+                Forms\Components\Group::make([
+                    Forms\Components\Section::make([
+                        Forms\Components\TimePicker::make('work_start_time')
+                            ->seconds(false)
+                            ->prefix('Dan')
+                            ->format('H:i')
+                            ->label('Ish soati(dan)')
+                            ->required(),
+                        Forms\Components\TimePicker::make('work_end_time')
+                            ->seconds(false)
+                            ->prefix('Gacha')
+                            ->format('H:i')
+                            ->label('Ish soati(gacha)')
+                            ->required(),
+                    ])
+                ])->label('fds')
             ]);
     }
 
@@ -37,6 +62,7 @@ class DoctorResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('id'),
                 Tables\Columns\TextColumn::make('user.name')->label('F.I.O'),
+                Tables\Columns\TextColumn::make('user.phone')->label('Telefon'),
                 Tables\Columns\TextColumn::make('specialization')->label('Mutaxassisligi'),
                 Tables\Columns\TextColumn::make('experience')->label('Tajribasi'),
                 Tables\Columns\TextColumn::make('birth_year')->label("Tug'ilgan sana"),
@@ -59,7 +85,7 @@ class DoctorResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\UsersRelationManager::class,
         ];
     }
 
