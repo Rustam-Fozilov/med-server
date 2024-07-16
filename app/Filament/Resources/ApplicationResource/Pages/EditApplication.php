@@ -34,7 +34,6 @@ class EditApplication extends EditRecord
         $chatId = $application->user->telegraph_chat_id;
 
         if ($chatId) {
-            $chat = TelegraphChat::query()->find($chatId);
             $message = "Assalomu alaykum, " . $application->user->name . PHP_EOL;
 
             if ($status === StatusType::APPROVED->value) {
@@ -48,7 +47,7 @@ class EditApplication extends EditRecord
                 "Soat: " . $application->time . PHP_EOL .
                 "Shifokor: " . $application->doctor->user->name;
 
-            $chat->html($message)->send();
+            TelegraphChat::query()->find($chatId)->html($message)->send();
         }
 
 

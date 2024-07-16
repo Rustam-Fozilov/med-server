@@ -2,11 +2,11 @@
 
 namespace App\Http\Enums;
 
-enum RoleType: int
+enum RoleType: string
 {
-    case SUPER_ADMIN = 1;
-    case MODERATOR = 2;
-    case DOCTOR = 3;
-    case USER = 4;
+    case SUPER_ADMIN = 'super_admin';
+    case MODERATOR = 'moderator';
+    case DOCTOR = 'doctor';
+    case USER = 'user';
 }
 

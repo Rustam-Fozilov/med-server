@@ -19,7 +19,7 @@ class ApplicationFactory extends Factory
     {
         return [
             'user_id' => 1,
-            'doctor_id' => 1,
+            'doctor_id' => 2,
             'date' => fake()->date('Y-m-d'),
             'time' => fake()->time('H:i:s'),
             'status' => StatusType::PENDING,

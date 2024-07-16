@@ -2,9 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Http\Enums\RoleType;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Role;
 
 class UserSeeder extends Seeder
 {
@@ -20,6 +22,6 @@ class UserSeeder extends Seeder
             'phone' => '+998901234567',
             'email' => 'bob@app.com',
             'password' => bcrypt('1234'),
-        ]);
+        ])->assignRole(RoleType::SUPER_ADMIN, RoleType::DOCTOR, RoleType::MODERATOR);
     }
 }

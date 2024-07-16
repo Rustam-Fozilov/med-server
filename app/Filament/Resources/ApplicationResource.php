@@ -63,7 +63,13 @@ class ApplicationResource extends Resource
                 Tables\Columns\TextColumn::make('created_at')->dateTime('d-m-Y | H:i:s')->label('Yaratilgan sana'),
             ])
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('status')
+                    ->options([
+                        StatusType::PENDING->value => StatusType::PENDING->value,
+                        StatusType::APPROVED->value => StatusType::APPROVED->value,
+                        StatusType::REJECTED->value => StatusType::REJECTED->value,
+                        StatusType::COMPLETED->value => StatusType::COMPLETED->value,
+                    ])
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

@@ -17,7 +17,7 @@ class DoctorFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => 1,
+            'user_id' => rand(1, 10),
             'specialization' => fake()->jobTitle,
             'experience' => fake()->company,
             'birth_year' => fake()->year,
