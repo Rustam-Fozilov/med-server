@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Enums\GenderType;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -14,7 +15,8 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('phone');
+            $table->string('phone')->nullable();
+            $table->enum('gender', [GenderType::MALE->value, GenderType::FEMALE->value])->nullable();
             $table->foreignId('telegraph_chat_id')->nullable()->comment('telegram id');
             $table->string('email')->nullable()->unique();
             $table->timestamp('email_verified_at')->nullable();
