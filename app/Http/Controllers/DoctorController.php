@@ -12,10 +12,12 @@ class DoctorController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(): JsonResponse
+    public function index(Request $request): JsonResponse
     {
         $doctors = DoctorResource::collection(
-            Doctor::all()
+            $request->limit ?
+                Doctor::query()->paginate($request->limit) :
+                Doctor::all()
         );
 
         return response()->json($doctors);

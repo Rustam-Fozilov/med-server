@@ -30,7 +30,8 @@ class ApplicationPolicy
      */
     public function create(User $user): bool
     {
-        return $user->hasRole([RoleType::DOCTOR, RoleType::SUPER_ADMIN]);
+        return false;
+//        return $user->hasRole([RoleType::DOCTOR, RoleType::SUPER_ADMIN]);
     }
 
     /**

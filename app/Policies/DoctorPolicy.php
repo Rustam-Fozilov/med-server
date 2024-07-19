@@ -14,7 +14,8 @@ class DoctorPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->hasRole([RoleType::SUPER_ADMIN, RoleType::MODERATOR]);
+//        return false;
+        return $user->hasRole([RoleType::DOCTOR, RoleType::MODERATOR]);
     }
 
     /**
@@ -22,7 +23,8 @@ class DoctorPolicy
      */
     public function view(User $user, Doctor $doctor): bool
     {
-        return $user->hasRole([RoleType::SUPER_ADMIN, RoleType::MODERATOR]);
+//        return false;
+        return $user->hasRole([RoleType::DOCTOR, RoleType::MODERATOR]);
     }
 
     /**
@@ -30,6 +32,7 @@ class DoctorPolicy
      */
     public function create(User $user): bool
     {
+//        return false;
         return $user->hasRole([RoleType::SUPER_ADMIN, RoleType::MODERATOR]);
     }
 
@@ -38,7 +41,8 @@ class DoctorPolicy
      */
     public function update(User $user, Doctor $doctor): bool
     {
-        return $user->hasRole([RoleType::SUPER_ADMIN, RoleType::MODERATOR]);
+//        return false;
+        return $user->hasRole([RoleType::DOCTOR, RoleType::MODERATOR]);
     }
 
     /**
@@ -46,7 +50,8 @@ class DoctorPolicy
      */
     public function delete(User $user, Doctor $doctor): bool
     {
-        return $user->hasRole([RoleType::SUPER_ADMIN, RoleType::MODERATOR]);
+//        return false;
+        return $user->hasRole([RoleType::DOCTOR, RoleType::MODERATOR]);
     }
 
     /**
@@ -54,7 +59,8 @@ class DoctorPolicy
      */
     public function restore(User $user, Doctor $doctor): bool
     {
-        return $user->hasRole([RoleType::SUPER_ADMIN, RoleType::MODERATOR]);
+//        return false;
+        return $user->hasRole([RoleType::DOCTOR, RoleType::MODERATOR]);
     }
 
     /**
@@ -62,6 +68,7 @@ class DoctorPolicy
      */
     public function forceDelete(User $user, Doctor $doctor): bool
     {
-        return $user->hasRole([RoleType::SUPER_ADMIN, RoleType::MODERATOR]);
+//        return false;
+        return $user->hasRole([RoleType::DOCTOR, RoleType::MODERATOR]);
     }
 }

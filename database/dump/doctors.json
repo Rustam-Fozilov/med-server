@@ -9,7 +9,8 @@
         "user_id": 1,
         "birth_year": 1969,
         "specialization": "Direktor",
-        "roles": ["moderator"]
+        "roles": ["moderator"],
+        "image": "kalandarova.png"
     },
     {
         "user": {
@@ -21,7 +22,8 @@
         "user_id": 2,
         "birth_year": 1988,
         "specialization": "Direktor o'rinbosari",
-        "roles": ["moderator", "doctor"]
+        "roles": ["moderator", "doctor"],
+        "image": "akkiev.png"
     },
     {
         "user": {
@@ -33,7 +35,8 @@
         "user_id": 3,
         "birth_year": 1971,
         "specialization": "Bo'lim boshlig'i",
-        "roles": ["doctor"]
+        "roles": ["doctor"],
+        "image": "zoirova.png"
     },
     {
         "user": {
@@ -45,31 +48,8 @@
         "user_id": 4,
         "birth_year": 1976,
         "specialization": "Bo‘lim boshlig‘i, ftiziopulmonolog",
-        "roles": ["doctor"]
-    },
-    {
-        "user": {
-            "name": "Abilova Manzura Rashidovna",
-            "phone": "+998935645320",
-            "gender": "female",
-            "password": "12345678"
-        },
-        "user_id": 5,
-        "birth_year": 1960,
-        "specialization": "Bo‘lim boshlig‘i, ftiziopulmonolog",
-        "roles": ["doctor"]
-    },
-    {
-        "user": {
-            "name": "Селькина Екатерина Ивановна",
-            "phone": "+998998038267",
-            "gender": "female",
-            "password": "12345678"
-        },
-        "user_id": 6,
-        "birth_year": 1959,
-        "specialization": "Bo‘lim boshlig‘i, ftiziopulmonolog",
-        "roles": ["doctor"]
+        "roles": ["doctor"],
+        "image": "sadirova.png"
     },
     {
         "user": {
@@ -81,19 +61,8 @@
         "user_id": 7,
         "birth_year": 1989,
         "specialization": "Maxalliy ftiziopulmonolog ",
-        "roles": ["doctor"]
-    },
-    {
-        "user": {
-            "name": "Jumaboyeva Solixa Abishevna",
-            "phone": "+998946508464",
-            "gender": "female",
-            "password": "12345678"
-        },
-        "user_id": 8,
-        "birth_year": 1973,
-        "specialization": "Maxalliy ftiziopulmonolog ",
-        "roles": ["doctor"]
+        "roles": ["doctor"],
+        "image": "haytaliev.png"
     },
     {
         "user": {
@@ -105,19 +74,8 @@
         "user_id": 9,
         "birth_year": 1977,
         "specialization": "Maxalliy ftiziopulmonolog ",
-        "roles": ["doctor"]
-    },
-    {
-        "user": {
-            "name": "Axmedjanova Nodira Abduzabarovna",
-            "phone": "+998935814515",
-            "gender": "female",
-            "password": "12345678"
-        },
-        "user_id": 10,
-        "birth_year": 1968,
-        "specialization": "Maxalliy ftiziopulmonolog",
-        "roles": ["doctor"]
+        "roles": ["doctor"],
+        "image": "sharapova.png"
     },
     {
         "user": {
@@ -129,31 +87,8 @@
         "user_id": 11,
         "birth_year": 1968,
         "specialization": "Maxalliy ftiziopulmonolog",
-        "roles": ["doctor"]
-    },
-    {
-        "user": {
-            "name": "Sayfiyeva Farida Fuatovna",
-            "phone": "+998901744996",
-            "gender": "female",
-            "password": "12345678"
-        },
-        "user_id": 12,
-        "birth_year": 1967,
-        "specialization": "Maxalliy ftiziopulmonolog",
-        "roles": ["doctor"]
-    },
-    {
-        "user": {
-            "name": "Ibragimova Shaxnoza Ubaydullayevna",
-            "phone": "+998994896640",
-            "gender": "female",
-            "password": "12345678"
-        },
-        "user_id": 13,
-        "birth_year": 1966,
-        "specialization": "Maxalliy ftiziopulmonolog",
-        "roles": ["doctor"]
+        "roles": ["doctor"],
+        "image": "inoyatova.png"
     },
     {
         "user": {
@@ -165,91 +100,8 @@
         "user_id": 14,
         "birth_year": 1987,
         "specialization": "Maxalliy ftiziopulmonolog",
-        "roles": ["doctor"]
-    },
-    {
-        "user": {
-            "name": "Karimova Muyassar Polatovna",
-            "phone": "+998935626134",
-            "gender": "female",
-            "password": "12345678"
-        },
-        "user_id": 15,
-        "birth_year": 1973,
-        "specialization": "Maxalliy ftiziopulmonolog",
-        "roles": ["doctor"]
-    },
-    {
-        "user": {
-            "name": "Muxamediyev Ilyos Karimjonovich",
-            "phone": "+998977732803",
-            "gender": "male",
-            "password": "12345678"
-        },
-        "user_id": 16,
-        "birth_year": 1978,
-        "specialization": "Maxalliy ftiziopulmonolog",
-        "roles": ["doctor"]
-    },
-    {
-        "user": {
-            "name": "G'ulomova Ra’no Qaxramonovna",
-            "phone": "+998935981632",
-            "gender": "female",
-            "password": "12345678"
-        },
-        "user_id": 17,
-        "birth_year": 1965,
-        "specialization": "Maxalliy ftiziopulmonolog",
-        "roles": ["doctor"]
-    },
-    {
-        "user": {
-            "name": "Sirojiddinova Sharofat Azizxo'jayevna",
-            "phone": "+998977264224",
-            "gender": "female",
-            "password": "12345678"
-        },
-        "user_id": 18,
-        "birth_year": 1958,
-        "specialization": "Maxalliy ftiziopulmonolog",
-        "roles": ["doctor"]
-    },
-    {
-        "user": {
-            "name": "Tashxo'jayeva Maqsuda Abduraximovna",
-            "phone": "+998977733911",
-            "gender": "female",
-            "password": "12345678"
-        },
-        "user_id": 19,
-        "birth_year": 1968,
-        "specialization": "Maxalliy ftiziopulmonolog",
-        "roles": ["doctor"]
-    },
-    {
-        "user": {
-            "name": "Saydoripov Kamoliddin Abdurashidovich",
-            "phone": "+998974478687",
-            "gender": "male",
-            "password": "12345678"
-        },
-        "user_id": 20,
-        "birth_year": 1990,
-        "specialization": "Maxalliy ftiziopulmonolog",
-        "roles": ["doctor"]
-    },
-    {
-        "user": {
-            "name": "Raxmonova Nodira Kadirovna",
-            "phone": "+998935068679",
-            "gender": "female",
-            "password": "12345678"
-        },
-        "user_id": 21,
-        "birth_year": 1980,
-        "specialization": "Maxalliy ftiziatr",
-        "roles": ["doctor"]
+        "roles": ["doctor"],
+        "image": "turdaliyev.png"
     },
     {
         "user": {
@@ -261,55 +113,8 @@
         "user_id": 22,
         "birth_year": 1992,
         "specialization": "Shifokor rentgenolog",
-        "roles": ["doctor"]
-    },
-    {
-        "user": {
-            "name": "Raimova Lola Jurayevna",
-            "phone": "+998901686161",
-            "gender": "female",
-            "password": "12345678"
-        },
-        "user_id": 23,
-        "birth_year": 1966,
-        "specialization": "Shifokor rentgenolog",
-        "roles": ["doctor"]
-    },
-    {
-        "user": {
-            "name": "Qadirova Diloram Ismatovna",
-            "phone": "+998909370915",
-            "gender": "female",
-            "password": "12345678"
-        },
-        "user_id": 24,
-        "birth_year": 1951,
-        "specialization": "Shifokor rentgenolog",
-        "roles": ["doctor"]
-    },
-    {
-        "user": {
-            "name": "Shakurova Dina Marsovna",
-            "phone": "+998909065709",
-            "gender": "female",
-            "password": "12345678"
-        },
-        "user_id": 25,
-        "birth_year": 1960,
-        "specialization": "Shifokor rentgenolog",
-        "roles": ["doctor"]
-    },
-    {
-        "user": {
-            "name": "Salixov Baxtiyor Abdujabborovich",
-            "phone": "+998977336367",
-            "gender": "male",
-            "password": "12345678"
-        },
-        "user_id": 26,
-        "birth_year": 1988,
-        "specialization": "Shifokor laborant",
-        "roles": ["doctor"]
+        "roles": ["doctor"],
+        "image": "abdumalikov.png"
     },
     {
         "user": {
@@ -321,7 +126,8 @@
         "user_id": 27,
         "birth_year": 1988,
         "specialization": "Maxalliy ftiziopulmonolog",
-        "roles": ["doctor"]
+        "roles": ["doctor"],
+        "image": "inoyatov.png"
     },
     {
         "user": {
@@ -333,7 +139,8 @@
         "user_id": 28,
         "birth_year": 1994,
         "specialization": "Shifokor rentgenolog",
-        "roles": ["doctor"]
+        "roles": ["doctor"],
+        "image": "rasyayev.png"
     },
     {
         "user": {
@@ -345,6 +152,228 @@
         "user_id": 29,
         "birth_year": 1972,
         "specialization": "Laboratoriya bo‘lim boshlig‘i",
-        "roles": ["doctor"]
+        "roles": ["doctor"],
+        "image": "xasanxodjayev.png"
+    },
+    {
+        "user": {
+            "name": "Tashxo'jayeva Maqsuda Abduraximovna",
+            "phone": "+998977733911",
+            "gender": "female",
+            "password": "12345678"
+        },
+        "user_id": 19,
+        "birth_year": 1968,
+        "specialization": "Maxalliy ftiziopulmonolog",
+        "roles": ["doctor"],
+        "image": "toshxodjayeva.png"
+    },
+    {
+        "user": {
+            "name": "Abilova Manzura Rashidovna",
+            "phone": "+998935645320",
+            "gender": "female",
+            "password": "12345678"
+        },
+        "user_id": 5,
+        "birth_year": 1960,
+        "specialization": "Bo‘lim boshlig‘i, ftiziopulmonolog",
+        "roles": ["doctor"],
+        "image": null
+    },
+    {
+        "user": {
+            "name": "Селькина Екатерина Ивановна",
+            "phone": "+998998038267",
+            "gender": "female",
+            "password": "12345678"
+        },
+        "user_id": 6,
+        "birth_year": 1959,
+        "specialization": "Bo‘lim boshlig‘i, ftiziopulmonolog",
+        "roles": ["doctor"],
+        "image": null
+    },
+    {
+        "user": {
+            "name": "Jumaboyeva Solixa Abishevna",
+            "phone": "+998946508464",
+            "gender": "female",
+            "password": "12345678"
+        },
+        "user_id": 8,
+        "birth_year": 1973,
+        "specialization": "Maxalliy ftiziopulmonolog ",
+        "roles": ["doctor"],
+        "image": null
+    },
+    {
+        "user": {
+            "name": "Axmedjanova Nodira Abduzabarovna",
+            "phone": "+998935814515",
+            "gender": "female",
+            "password": "12345678"
+        },
+        "user_id": 10,
+        "birth_year": 1968,
+        "specialization": "Maxalliy ftiziopulmonolog",
+        "roles": ["doctor"],
+        "image": null
+    },
+    {
+        "user": {
+            "name": "Sayfiyeva Farida Fuatovna",
+            "phone": "+998901744996",
+            "gender": "female",
+            "password": "12345678"
+        },
+        "user_id": 12,
+        "birth_year": 1967,
+        "specialization": "Maxalliy ftiziopulmonolog",
+        "roles": ["doctor"],
+        "image": null
+    },
+    {
+        "user": {
+            "name": "Ibragimova Shaxnoza Ubaydullayevna",
+            "phone": "+998994896640",
+            "gender": "female",
+            "password": "12345678"
+        },
+        "user_id": 13,
+        "birth_year": 1966,
+        "specialization": "Maxalliy ftiziopulmonolog",
+        "roles": ["doctor"],
+        "image": null
+    },
+    {
+        "user": {
+            "name": "Karimova Muyassar Polatovna",
+            "phone": "+998935626134",
+            "gender": "female",
+            "password": "12345678"
+        },
+        "user_id": 15,
+        "birth_year": 1973,
+        "specialization": "Maxalliy ftiziopulmonolog",
+        "roles": ["doctor"],
+        "image": null
+    },
+    {
+        "user": {
+            "name": "Muxamediyev Ilyos Karimjonovich",
+            "phone": "+998977732803",
+            "gender": "male",
+            "password": "12345678"
+        },
+        "user_id": 16,
+        "birth_year": 1978,
+        "specialization": "Maxalliy ftiziopulmonolog",
+        "roles": ["doctor"],
+        "image": null
+    },
+    {
+        "user": {
+            "name": "G'ulomova Ra’no Qaxramonovna",
+            "phone": "+998935981632",
+            "gender": "female",
+            "password": "12345678"
+        },
+        "user_id": 17,
+        "birth_year": 1965,
+        "specialization": "Maxalliy ftiziopulmonolog",
+        "roles": ["doctor"],
+        "image": null
+    },
+    {
+        "user": {
+            "name": "Sirojiddinova Sharofat Azizxo'jayevna",
+            "phone": "+998977264224",
+            "gender": "female",
+            "password": "12345678"
+        },
+        "user_id": 18,
+        "birth_year": 1958,
+        "specialization": "Maxalliy ftiziopulmonolog",
+        "roles": ["doctor"],
+        "image": null
+    },
+    {
+        "user": {
+            "name": "Saydoripov Kamoliddin Abdurashidovich",
+            "phone": "+998974478687",
+            "gender": "male",
+            "password": "12345678"
+        },
+        "user_id": 20,
+        "birth_year": 1990,
+        "specialization": "Maxalliy ftiziopulmonolog",
+        "roles": ["doctor"],
+        "image": null
+    },
+    {
+        "user": {
+            "name": "Raxmonova Nodira Kadirovna",
+            "phone": "+998935068679",
+            "gender": "female",
+            "password": "12345678"
+        },
+        "user_id": 21,
+        "birth_year": 1980,
+        "specialization": "Maxalliy ftiziatr",
+        "roles": ["doctor"],
+        "image": null
+    },
+    {
+        "user": {
+            "name": "Raimova Lola Jurayevna",
+            "phone": "+998901686161",
+            "gender": "female",
+            "password": "12345678"
+        },
+        "user_id": 23,
+        "birth_year": 1966,
+        "specialization": "Shifokor rentgenolog",
+        "roles": ["doctor"],
+        "image": null
+    },
+    {
+        "user": {
+            "name": "Qadirova Diloram Ismatovna",
+            "phone": "+998909370915",
+            "gender": "female",
+            "password": "12345678"
+        },
+        "user_id": 24,
+        "birth_year": 1951,
+        "specialization": "Shifokor rentgenolog",
+        "roles": ["doctor"],
+        "image": null
+    },
+    {
+        "user": {
+            "name": "Shakurova Dina Marsovna",
+            "phone": "+998909065709",
+            "gender": "female",
+            "password": "12345678"
+        },
+        "user_id": 25,
+        "birth_year": 1960,
+        "specialization": "Shifokor rentgenolog",
+        "roles": ["doctor"],
+        "image": null
+    },
+    {
+        "user": {
+            "name": "Salixov Baxtiyor Abdujabborovich",
+            "phone": "+998977336367",
+            "gender": "male",
+            "password": "12345678"
+        },
+        "user_id": 26,
+        "birth_year": 1988,
+        "specialization": "Shifokor laborant",
+        "roles": ["doctor"],
+        "image": null
     }
 ]

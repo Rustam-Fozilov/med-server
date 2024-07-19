@@ -23,7 +23,10 @@ class ListApplications extends ListRecords
     protected function getTableQuery(): Builder
     {
         if (auth()->user()->hasRole(RoleType::DOCTOR)) {
-            return parent::getTableQuery()->whereRelation('doctor', 'user_id', '=', auth()->user()->id)->withoutGlobalScopes();
+            return parent::getTableQuery()
+                ->whereRelation('doctor', 'user_id', '=', auth()->user()->id)
+                ->orderBy('created_at', 'desc')
+                ->withoutGlobalScopes();
         }
 
         return parent::getTableQuery()->limit(5)->withoutGlobalScopes();

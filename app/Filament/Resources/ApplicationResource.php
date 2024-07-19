@@ -3,9 +3,9 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ApplicationResource\Pages;
-use App\Filament\Resources\ApplicationResource\RelationManagers;
 use App\Http\Enums\StatusType;
 use App\Models\Application;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -69,7 +69,23 @@ class ApplicationResource extends Resource
                         StatusType::APPROVED->value => StatusType::APPROVED->value,
                         StatusType::REJECTED->value => StatusType::REJECTED->value,
                         StatusType::COMPLETED->value => StatusType::COMPLETED->value,
-                    ])
+                    ]),
+                Tables\Filters\Filter::make('created_at')
+                ->form([
+                    DatePicker::make('created_from')->label('Dan'),
+                    DatePicker::make('created_until')->label('Gacha'),
+                ])
+                ->query(function (Builder $query, array $data): Builder {
+                    return $query
+                        ->when(
+                            $data['created_from'],
+                            fn (Builder $query, $date): Builder => $query->whereDate('created_at', '>=', $date),
+                        )
+                        ->when(
+                            $data['created_until'],
+                            fn (Builder $query, $date): Builder => $query->whereDate('created_at', '<=', $date),
+                        );
+                })
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

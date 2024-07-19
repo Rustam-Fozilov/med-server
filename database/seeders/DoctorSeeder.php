@@ -2,14 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Http\Enums\RoleType;
-use App\Models\Doctor;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Http\File;
 use Illuminate\Support\Facades\Hash;
-use Spatie\Permission\Models\Role;
 
 class DoctorSeeder extends Seeder
 {
@@ -28,10 +24,14 @@ class DoctorSeeder extends Seeder
                 'gender' => $doctor->user->gender,
                 'password' => Hash::make($doctor->user->password),
             ])->assignRole($doctor->roles);
-            $user->doctor()->create([
+            $doctorNew = $user->doctor()->create([
                 'user_id' => $user->id,
                 'birth_year' => $doctor->birth_year,
                 'specialization' => $doctor->specialization,
+            ]);
+            $doctorNew->images()->create([
+                'url' => $doctor->image ? env('APP_URL') . '/storage/doctors/' . $doctor->image :
+                    ($doctor->user->gender === 'male' ? env('APP_URL') . '/storage/doctors/' . "male-sample.png" : env('APP_URL') . '/storage/doctors/' . "female-sample.png"),
             ]);
         }
     }

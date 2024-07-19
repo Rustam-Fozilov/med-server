@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\ServiceResource;
 use App\Models\Service;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -11,14 +12,14 @@ class ServiceController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(): JsonResponse
+    public function index(Request $request): JsonResponse
     {
-        $services = Service::all();
+        $services = ServiceResource::collection(
+            $request->limit ? Service::query()->paginate($request->limit) :
+                Service::all()
+        );
 
-        return response()->json([
-            'data' => $services,
-            'success' => true,
-        ]);
+        return response()->json($services);
     }
 
     /**
