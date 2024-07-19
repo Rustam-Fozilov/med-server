@@ -17,14 +17,14 @@ class ServiceSeeder extends Seeder
             'name' => 'Pulmonolog maslahati',
             'price' => 50000
         ])->images()->create([
-            'url' => env('APP_URL') . '/storage/services/sample-service.jpg'
+            'url' => env('APP_URL') . '/storage/services/pulmonolog-maslahati.jpg'
         ]);
 
         Service::query()->create([
             'name' => 'Ftiziatr maslahati',
             'price' => 50000
         ])->images()->create([
-            'url' => env('APP_URL') . '/storage/services/sample-service.jpg'
+            'url' => env('APP_URL') . '/storage/services/ftiziatr-maslahati.jpeg'
         ]);
 
         Service::query()->create([
@@ -38,7 +38,7 @@ class ServiceSeeder extends Seeder
             'name' => 'Raqamli rentgen tekshiruv (plenka bilan)',
             'price' => 59000
         ])->images()->create([
-            'url' => env('APP_URL') . '/storage/services/sample-service.jpg'
+            'url' => env('APP_URL') . '/storage/services/rentgen.jpg'
         ]);
 
         Service::query()->create([
@@ -52,14 +52,14 @@ class ServiceSeeder extends Seeder
             'name' => 'EKG',
             'price' => 40000
         ])->images()->create([
-            'url' => env('APP_URL') . '/storage/services/sample-service.jpg'
+            'url' => env('APP_URL') . '/storage/services/ekg.webp'
         ]);
 
         Service::query()->create([
             'name' => 'Spirografiya (FVD)',
             'price' => 42000
         ])->images()->create([
-            'url' => env('APP_URL') . '/storage/services/sample-service.jpg'
+            'url' => env('APP_URL') . '/storage/services/fvd.jpg'
         ]);
 
         Service::query()->create([
@@ -73,7 +73,7 @@ class ServiceSeeder extends Seeder
             'name' => 'Umumiy Qon taxlili',
             'price' => 40000
         ])->images()->create([
-            'url' => env('APP_URL') . '/storage/services/sample-service.jpg'
+            'url' => env('APP_URL') . '/storage/services/qon-tahlili.webp'
         ]);
 
         Service::query()->create([
@@ -87,14 +87,14 @@ class ServiceSeeder extends Seeder
             'name' => 'Ginekologik ajralma tahlili',
             'price' => 40000
         ])->images()->create([
-            'url' => env('APP_URL') . '/storage/services/sample-service.jpg'
+            'url' => env('APP_URL') . '/storage/services/ajratma-tahlili.webp'
         ]);
 
         Service::query()->create([
             'name' => 'Tahlil uchun qon olish',
             'price' => 10000
         ])->images()->create([
-            'url' => env('APP_URL') . '/storage/services/sample-service.jpg'
+            'url' => env('APP_URL') . '/storage/services/qon-olish.webp'
         ]);
 
         Service::query()->create([
