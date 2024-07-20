@@ -54,4 +54,14 @@ class EditApplication extends EditRecord
         $record->update($data);
         return $record;
     }
+
+    protected function getSavedNotificationMessage(): ?string
+    {
+        return 'Saqlandi';
+    }
+
+    protected function getRedirectUrl(): ?string
+    {
+        return '/admin/applications';
+    }
 }
