@@ -10,7 +10,6 @@ use DefStudio\Telegraph\Handlers\WebhookHandler;
 use DefStudio\Telegraph\Keyboard\Keyboard;
 use DefStudio\Telegraph\Keyboard\ReplyButton;
 use DefStudio\Telegraph\Keyboard\ReplyKeyboard;
-use DefStudio\Telegraph\Models\TelegraphBot;
 use DefStudio\Telegraph\Models\TelegraphChat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Stringable;
@@ -29,7 +28,14 @@ class StartHandler extends WebhookHandler
     protected function handleChatMessage(Stringable $text): void
     {
         if ($this->message->contact()?->phoneNumber()) {
-            $user = User::query()->where("phone", $this->message->contact()->phoneNumber())->first();
+            $this->chat->message($this->message->contact()->phoneNumber())->send();
+            $phone = $this->message->contact()->phoneNumber();
+
+            if (!str_contains($phone, '+')) {
+                $phone = "+" . $phone;
+            }
+
+            $user = User::query()->where("phone", $phone)->first();
 
             if (!$user) {
                 $user = User::query()->create([
