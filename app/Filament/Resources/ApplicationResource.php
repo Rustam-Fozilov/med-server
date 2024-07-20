@@ -112,4 +112,14 @@ class ApplicationResource extends Resource
             'edit' => Pages\EditApplication::route('/{record}/edit'),
         ];
     }
+
+    public static function getNavigationBadge(): ?string
+    {
+        $pendingCount = parent::getModel()::query()
+            ->where('doctor_id', '=', auth()->user()->doctor->id)
+            ->where('status', StatusType::PENDING)
+            ->count();
+
+        return $pendingCount === 0 ? null : $pendingCount;
+    }
 }
