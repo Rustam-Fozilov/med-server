@@ -28,7 +28,7 @@ class StartHandler extends WebhookHandler
     protected function handleChatMessage(Stringable $text): void
     {
         if ($this->message->contact()?->phoneNumber()) {
-            $this->chat->message($this->message->contact()->phoneNumber())->send();
+//            $this->chat->message($this->message->contact()->phoneNumber())->send();
             $phone = $this->message->contact()->phoneNumber();
 
             if (!str_contains($phone, '+')) {
