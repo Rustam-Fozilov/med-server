@@ -30,8 +30,8 @@ class DoctorSeeder extends Seeder
                 'specialization' => $doctor->specialization,
             ]);
             $doctorNew->images()->create([
-                'url' => $doctor->image ? env('APP_URL') . '/storage/doctors/' . $doctor->image :
-                    ($doctor->user->gender === 'male' ? env('APP_URL') . '/storage/doctors/' . "male-sample.png" : env('APP_URL') . '/storage/doctors/' . "female-sample.png"),
+                'url' => $doctor->image ? env('APP_URL') . '/storage/app/public/doctors/' . $doctor->image :
+                    ($doctor->user->gender === 'male' ? env('APP_URL') . '/storage/app/public/doctors/' . "male-sample.png" : env('APP_URL') . '/storage/app/public/doctors/' . "female-sample.png"),
             ]);
         }
     }
